@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVIS</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="/static/js/chart.js" defer></script>
+    <script src="/static/js/main.js" defer></script>
+</head>
+<body>
+
+<div class="controls">
+    <div class="label-container">
+        <label for="companies">Number of Companies:</label>
+        <input type="number" id="companies">
+
+        <label for="layers">Number of Layers:</label>
+        <input type="number" id="layers" value="0" min="0" oninput="updateLayers()">
+        <div id="layerSliders"></div>
+    </div>
+    
+    <button onclick="generateCompanyFields()">Create Chart</button>
+</div>
+
+<div id="company-details"></div>
+
+<!-- Moved the layerLinesContainer div inside the chart-container div -->
+<div class="chart-container" id="chartContainer">
+    <div id="layerLinesContainer"></div>  <!-- Here's the missing container -->
+    <div id="companyBarsContainer"></div>
+</div>
+
+</body>
+</html>
+
+
+
